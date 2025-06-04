@@ -1,0 +1,35 @@
+---
+import astroLogo from "../assets/astro.svg";
+import background from "../assets/background.svg";
+import Card from "../components/Card.astro";
+---
+
+<div id="container">
+  <img id="background" src={background.src} alt="" fetchpriority="high" />
+
+  <main class="px-4 sm:px-8 lg:px-16 py-10">
+    <section id="hero" class="text-center mb-12"></section>
+
+    <!-- Cards Section -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <Card
+        title="Javascript"
+        date="2022-10-10"
+        image="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=2070&q=80"
+        excerpt="Recusandae dolores, pariatur animi temporibus nesciunt praesentium dolore sed nulla..."
+      />
+      <Card
+        title="Designing with Light"
+        date="2023-03-15"
+        image="https://images.unsplash.com/photo-1586201375761-83865001e17b?auto=format&fit=crop&w=2070&q=80"
+        excerpt="Exploring the power of light in interior spaces."
+      />
+      <Card
+        title="Embrace the Mess"
+        date="2024-01-08"
+        image="https://images.unsplash.com/photo-1560185127-6ed189bf93b4?auto=format&fit=crop&w=2070&q=80"
+        excerpt="Why chaos can lead to creativity in design."
+      />
+    </section>
+  </main>
+</div>
