@@ -1,0 +1,33 @@
+---
+// No necesitas props ni imports
+---
+
+<header class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+
+      <!-- Logo o título -->
+      <a href="/" class="text-xl font-bold text-gray-900">
+        EstoicoDev
+      </a>
+
+      <!-- Navegación -->
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
+        <a href="/" class="hover:text-blue-600 transition">Inicio</a>
+        <a href="/proyectos" class="hover:text-blue-600 transition">Proyectos</a>
+        <a href="/filosofia" class="hover:text-blue-600 transition">Filosofía</a>
+        <a href="/contacto" class="hover:text-blue-600 transition">Contacto</a>
+      </nav>
+
+      <!-- Botón mobile (opcional, aún sin funcionalidad) -->
+      <div class="md:hidden">
+        <button class="text-gray-500 hover:text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

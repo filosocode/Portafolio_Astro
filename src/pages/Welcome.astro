@@ -1,35 +1,54 @@
 ---
-import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
 import Card from "../components/Card.astro";
 ---
 
-<div id="container">
-  <img id="background" src={background.src} alt="" fetchpriority="high" />
+<div id="container" class="relative min-h-screen bg-black text-white">
+  <img
+    id="background"
+    src={background.src}
+    alt=""
+    fetchpriority="high"
+    class="absolute inset-0 w-full h-full object-cover opacity-20"
+  />
 
-  <main class="px-4 sm:px-8 lg:px-16 py-10">
-    <section id="hero" class="text-center mb-12"></section>
+  <main class="relative z-10 px-4 sm:px-8 lg:px-16 py-10">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
+      
+      <!-- Texto de bienvenida en la mitad izquierda -->
+      <div class="text-center lg:text-left flex flex-col justify-center h-full">
+        <h1 class="text-3xl md:text-4xl font-bold text-white">
+          Bienvenido a mi espacio <br /> entre la lógica y la reflexión
+        </h1>
+        <p class="mt-4 text-gray-400 text-lg max-w-md mx-auto lg:mx-0">
+          Soy desarrollador, estudiante de filosofía y creador de contenido. Aquí comparto lo que construyo, pienso y transmito.
+        </p>
+      </div>
 
-    <!-- Cards Section -->
-    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <Card
-        title="Javascript"
-        date="2022-10-10"
-        image="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=2070&q=80"
-        excerpt="Recusandae dolores, pariatur animi temporibus nesciunt praesentium dolore sed nulla..."
-      />
-      <Card
-        title="Designing with Light"
-        date="2023-03-15"
-        image="https://images.unsplash.com/photo-1586201375761-83865001e17b?auto=format&fit=crop&w=2070&q=80"
-        excerpt="Exploring the power of light in interior spaces."
-      />
-      <Card
-        title="Embrace the Mess"
-        date="2024-01-08"
-        image="https://images.unsplash.com/photo-1560185127-6ed189bf93b4?auto=format&fit=crop&w=2070&q=80"
-        excerpt="Why chaos can lead to creativity in design."
-      />
+      <!-- Tarjetas en la mitad derecha -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <Card
+          title="GeoEpoca: Inserción inteligente de timestamps"
+          date="2024-11-12"
+          image="https://images.unsplash.com/photo-1603570419876-e54b7b6be6ec?auto=format&fit=crop&w=1200&q=80"
+          excerpt="Script en Python con GUI para insertar timestamps en archivos RINEX. Incluye validaciones, logs y análisis temporal."
+          link="https://github.com/filosocode/ppk_inserter"
+        />
+        <Card
+          title="La lentitud como resistencia"
+          date="2025-03-01"
+          image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+          excerpt="Pensar lento es subversivo en una era de automatismo. ¿Qué pierde el pensamiento cuando se mide en eficiencia?"
+          link="/posts/lentitud"
+        />
+        <Card
+          title="Capitulos podcast  "
+          date="2025-01-18"
+          image="https://images.unsplash.com/photo-1494173853739-c21f58b16055?auto=format&fit=crop&w=1200&q=80"
+          excerpt="En este episodio comparto ideas sobre cómo cultivar pensamiento crítico frente a las tecnologías que usamos a diario."
+          link="https://open.spotify.com/episode/tu-episodio-id"
+        />
+      </div>
     </section>
   </main>
 </div>
